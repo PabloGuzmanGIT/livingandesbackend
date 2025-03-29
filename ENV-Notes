@@ -11,3 +11,7 @@ this was added to package.json on script
 backend url     https://livingandes-backend-production.up.railway.app/
 frontend url    https://linvingandes-frontend-production.up.railway.app/ 
 redisurl        redis://default:DsEqDagpbGFuyblIIUHrWalPndhLzWfa@ballast.proxy.rlwy.net:46798
+
+
+I removed from gitignore /dist
+I removed from gitignore .medusa
