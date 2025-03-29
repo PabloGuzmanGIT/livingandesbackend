@@ -18,3 +18,17 @@ I removed from gitignore .medusa
 
 
 Redis url modified redis://localhost:6379s
+
+
+plugins was added to medusa-config.ts to deploy it on https://livingandes-backend-production.up.railway.app/
+  plugins: [
+    {
+      resolve: "@medusajs/admin",
+      /** @type {import('@medusajs/admin').PluginOptions} */
+      options: {
+        // Enable `serve` in development mode only
+        serve: process.env.NODE_ENV === "development",
+      },
+    },
+  ],
+

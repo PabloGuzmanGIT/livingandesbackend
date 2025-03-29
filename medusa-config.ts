@@ -18,6 +18,16 @@ module.exports = defineConfig({
     {
       resolve: "./src/modules/brand",
     },
-  ]
+  ],
+  plugins: [
+    {
+      resolve: "@medusajs/admin",
+      /** @type {import('@medusajs/admin').PluginOptions} */
+      options: {
+        // Enable `serve` in development mode only
+        serve: process.env.NODE_ENV === "development",
+      },
+    },
+  ],
   
 })
