@@ -1,0 +1,2 @@
+postgresql://postgres:GxeOMBIExwlyjDXsusLCKpuLhtJlTykR@shuttle.proxy.rlwy.net:11435/railway
+postgres://postgres:root@localhost/medusa-my-medusa-store   this is the default URL
