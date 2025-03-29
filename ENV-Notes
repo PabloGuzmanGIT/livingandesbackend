@@ -15,3 +15,6 @@ redisurl        redis://default:DsEqDagpbGFuyblIIUHrWalPndhLzWfa@ballast.proxy.r
 
 I removed from gitignore /dist
 I removed from gitignore .medusa
+
+
+Redis url modified redis://localhost:6379s
