@@ -32,3 +32,8 @@ plugins was added to medusa-config.ts to deploy it on https://livingandes-backen
     },
   ],
 
+
+This was changed on scrip package json 
+"build": "medusa build",
+TO
+"cross-env npm run clean && npm run build:server"
