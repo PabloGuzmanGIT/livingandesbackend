@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # LivingAndes-BackEnd
 Backend for E-commerce
 =======
+=======
+>>>>>>> b8320b2af78f736d405bd4f91c11ac09f37f1b18
 <p align="center">
   <a href="https://www.medusajs.com">
   <picture>
@@ -64,4 +67,7 @@ Join our [Discord server](https://discord.com/invite/medusajs) to meet other com
 - [Twitter](https://twitter.com/medusajs)
 - [LinkedIn](https://www.linkedin.com/company/medusajs)
 - [Medusa Blog](https://medusajs.com/blog/)
+<<<<<<< HEAD
 >>>>>>> b8320b2 (Primer commit)
+=======
+>>>>>>> b8320b2af78f736d405bd4f91c11ac09f37f1b18
