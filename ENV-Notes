@@ -1,2 +1,13 @@
 postgresql://postgres:GxeOMBIExwlyjDXsusLCKpuLhtJlTykR@shuttle.proxy.rlwy.net:11435/railway
 postgres://postgres:root@localhost/medusa-my-medusa-store   this is the default URL
+
+
+removed .medusa from git ignore file and redeploying
+
+this was added to package.json on script 
+"prestart": "medusa migrations run"
+
+
+backend url     https://livingandes-backend-production.up.railway.app/
+frontend url    https://linvingandes-frontend-production.up.railway.app/ 
+redisurl        redis://default:DsEqDagpbGFuyblIIUHrWalPndhLzWfa@ballast.proxy.rlwy.net:46798
