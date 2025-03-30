@@ -15,7 +15,6 @@
   ],
   "scripts": {
     "build": "medusa build && ln -s .medusa/server/public/public",
-    "build:admin": "medusa-admin build --deployment",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
     "dev": "medusa develop",
