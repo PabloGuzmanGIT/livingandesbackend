@@ -1,5 +1,6 @@
 {
   "name": "my-medusa-store",
+  "type":"module",
   "version": "0.0.1",
   "description": "A starter for Medusa projects.",
   "author": "Medusa (https://medusajs.com)",
@@ -14,6 +15,7 @@
   ],
   "scripts": {
     "build": "medusa build && ln -s .medusa/server/public/public",
+    "build:admin": "medusa-admin build --deployment",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
     "dev": "medusa develop",

@@ -58,3 +58,4 @@ Update tsconfig.json file
 
 "outDir": "./.medusa/server",
 to "./dist"
+se cambio a normal
