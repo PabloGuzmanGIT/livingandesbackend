@@ -1,0 +1,44 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# Build output
+dist/
+build/
+.next/
+out/
+.cache/
+public/public
+
+# Logs
+logs/
+*.log
+*.gz
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+
+# IDEs
+.vscode/
+.idea/
+
+# Misc
+*.tgz
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Optional: skip test output
+coverage/
+jest/
+
+# Yarn plug'n'play
+.pnp*

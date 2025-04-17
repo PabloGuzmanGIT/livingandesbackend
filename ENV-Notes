@@ -1,0 +1,61 @@
+postgresql://postgres:GxeOMBIExwlyjDXsusLCKpuLhtJlTykR@shuttle.proxy.rlwy.net:11435/railway
+postgres://postgres:root@localhost/medusa-my-medusa-store   this is the default URL
+
+
+removed .medusa from git ignore file and redeploying
+
+this was added to package.json on script 
+"prestart": "medusa migrations run"
+
+
+backend url     https://livingandes-backend-production.up.railway.app/
+frontend url    https://linvingandes-frontend-production.up.railway.app/ 
+redisurl        redis://default:DsEqDagpbGFuyblIIUHrWalPndhLzWfa@ballast.proxy.rlwy.net:46798
+
+
+I removed from gitignore /dist
+I removed from gitignore .medusa
+
+
+Redis url modified redis://localhost:6379s
+
+
+plugins was added to medusa-config.ts to deploy it on https://livingandes-backend-production.up.railway.app/
+  plugins: [
+    {
+      resolve: "@medusajs/admin",
+      /** @type {import('@medusajs/admin').PluginOptions} */
+      options: {
+        // Enable `serve` in development mode only
+        serve: process.env.NODE_ENV === "development",
+      },
+    },
+  ],
+
+
+package.json modified to this
+"scripts": {
+    "build": "medusa build && ln -s .medusa/server/public/public",
+    "seed": "medusa exec ./src/scripts/seed.ts",
+    "start": "NODE_ENV=production medusa start -H 0.0.0.0",
+    "dev": "medusa develop",
+    "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
+    "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
+    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
+  }
+
+from this
+
+    "build": "medusa build",
+    "seed": "medusa exec ./src/scripts/seed.ts",
+    "start": "medusa start",
+    "dev": "medusa develop",
+    "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
+    "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
+    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
+
+Update tsconfig.json file
+
+"outDir": "./.medusa/server",
+to "./dist"
+se cambio a normal
