@@ -11,6 +11,11 @@
     "ecommerce",
     "headless",
     "medusa"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
   ],
   "scripts": {
     "build": "medusa build && ln -s .medusa/server/public/public",

@@ -1,14 +1,16 @@
-# Stage 1: Build
-FROM node:18-alpine AS builder
+FROM node:22-alpine
 
 WORKDIR /app
 
-# Copy all source files
+COPY package*.json ./
+
+RUN npm install
+
 COPY . .
 
-# Expose port
-EXPOSE $PORT
+RUN npm run build
 
+EXPOSE 9000
 
-# Start command
-CMD ["npm","run","start"]
+CMD ["npm", "run", "start"]
+
