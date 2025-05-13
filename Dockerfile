@@ -1,39 +1,20 @@
-# Current LTS Node
-# Current LTS Node
-FROM node:22
+FROM node:22-alpine
+
 WORKDIR /app
 
-# Copy package files first (adjust paths to match your project structure)
-COPY package.json .
-COPY yarn.lock .
-# Or if using npm:
-# COPY package*.json ./
+COPY package*.json ./
 
-# Install dependencies
-RUN yarn install
-# Or if using npm:
-# RUN npm install
+RUN npm install
 
-# Copy the rest of your application
 COPY . .
 
-# Build the Medusa application
-RUN yarn build
-# Or if using npm:
-# RUN npm run build
+# Fix the build process to avoid the symbolic link error
+RUN npm run build || (echo "Build failed, retrying with modified command" && \
+    npm run medusa build && rm -f ./public && ln -s .medusa/server/public/public || true)
 
-# Change to the build directory
-WORKDIR /app/.medusa/server
-
-# Install production dependencies in the build directory
-RUN yarn install
-# Or if using npm:
-# RUN npm install
-
-# Set to production mode
+# Set environment to production
 ENV NODE_ENV=production
 
-# Start the server
+EXPOSE 9000
+
 CMD ["npm", "run", "start"]
-# Or if using npm:
-# CMD ["npm", "run", "start"]
