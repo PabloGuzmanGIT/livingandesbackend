@@ -3,6 +3,7 @@ import { loadEnv, defineConfig } from '@medusajs/framework/utils'
 loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 export default defineConfig({
+
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     http: {
@@ -13,6 +14,12 @@ export default defineConfig({
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
 
     }
+  },
+  admin: {
+    vite: config => {
+      config.server.allowedHosts = ['https://livingandesbackend-production.up.railway.app']
+      return config
+    },
   },
   modules: [
     {
