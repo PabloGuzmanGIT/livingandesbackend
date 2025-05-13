@@ -22,6 +22,7 @@ import type User from '@medusajs/medusa/user'
 import type File from '@medusajs/medusa/file'
 import type Fulfillment from '@medusajs/medusa/fulfillment'
 import type Notification from '@medusajs/medusa/notification'
+import type Brand from '..\..\src\modules\brand'
 
 declare module '@medusajs/framework/types' {
   interface ModuleImplementations {
@@ -48,6 +49,7 @@ declare module '@medusajs/framework/types' {
     user: InstanceType<(typeof User)['service']>,
     file: InstanceType<(typeof File)['service']>,
     fulfillment: InstanceType<(typeof Fulfillment)['service']>,
-    notification: InstanceType<(typeof Notification)['service']>
+    notification: InstanceType<(typeof Notification)['service']>,
+    brand: InstanceType<(typeof Brand)['service']>
   }
 }
