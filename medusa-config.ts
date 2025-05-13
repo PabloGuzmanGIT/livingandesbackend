@@ -16,9 +16,12 @@ export default defineConfig({
     }
   },
   admin: {
-    vite: config => {
-      config.server.allowedHosts = ['https://livingandesbackend-production.up.railway.app']
-      return config
+    vite: () => {
+      return {
+        server: {
+          allowedHosts: ['https://livingandesbackend-production.up.railway.app'],
+        },
+      }
     },
   },
   modules: [
