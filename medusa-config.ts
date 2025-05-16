@@ -18,6 +18,10 @@ module.exports = defineConfig({
 
   modules: [
     {
+      resolve: "@medusajs/stock-location",
+        options: {}
+    },
+    {
       resolve: "./src/modules/brand",
     }
   ]
